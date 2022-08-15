@@ -5,20 +5,9 @@
 #include "wheels.h"
 #include "sm.h"
 
-volatile unsigned int Time_Sequence;
+
 extern volatile unsigned char update_display;
-volatile unsigned long timer0Counter;
-volatile unsigned int backliteCounter;
-unsigned int debounce_count1, debounce_count2;
-volatile unsigned int debouncing1, debouncing2;
-volatile unsigned int debounce_thresh1 = 10, debounce_thresh2 = 10;
-volatile unsigned int checkAdc;
-extern volatile char state;
-extern volatile unsigned int rightSwitchable, leftSwitchable;
-volatile int timeElapsedSeconds,timeElapsedMilliseconds;
-volatile unsigned int stopwatchUpdated;
 extern char receievedFromPC;
-extern char commandsReceieved;
 char pingCounter;
 volatile char pingFlag;
 
@@ -116,13 +105,6 @@ __interrupt void Timer0_B0_ISR(void) {
     //------------------------------------------------------------------------------
     // TimerB0 0 Interrupt handler
     //----------------------------------------------------------------------------
-    if(Time_Sequence++ == TIME_SEQUENCE_MAX) Time_Sequence = 0;
-
-    if(++timer0Counter >= CHECK_ADC_TIMER_COUNT ) { // 56 ms
-        timer0Counter = 0;
-        ADCCTL0 |= ADCSC;
-    }
-
     TB0CCR0 += TB0CCR0_INTERVAL; // Add Offset to TBCCR0
     //----------------------------------------------------------------------------
 }
@@ -197,21 +179,10 @@ __interrupt void Timer1_B0_ISR(void) {
     // TimerB0 0 Interrupt handler
     //----------------------------------------------------------------------------
     P3OUT |= IOT_EN_CPU;
-
-    if(commandsReceieved && state != DONE) {
-        stopwatchUpdated = 1;
-        timeElapsedMilliseconds+=2;
-        if(timeElapsedMilliseconds>=10){
-          timeElapsedMilliseconds = 0;
-          timeElapsedSeconds++;
-        }
-    }
-
     if(pingCounter++>=PING_COUNT_MAX){
       pingCounter = 0;
       pingFlag = 1;
     }
-    
     update_display = 1;
     TB1CCR0 += TB1CCR0_INTERVAL;
     //----------------------------------------------------------------------------
@@ -227,15 +198,10 @@ __interrupt void TIMER1_B1_ISR(void) {
             break; // No interrupt
 
         case 2: // Left Motor
-            leftSwitchable = 1;
-            TB1CCTL1 &= ~CCIE;
 
             break;
 
         case 4: // Right Motor
-
-            rightSwitchable = 1;
-            TB1CCTL2 &= ~CCIE;
 
             break;
 
