@@ -31,7 +31,7 @@ char* subStringPos(const char* str, char * subString) {
         }
 
         if (exists) {
-          return (char*)(str + i);
+            return (char*)(str + i);
         }
     }
 

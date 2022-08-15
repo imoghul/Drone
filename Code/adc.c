@@ -52,6 +52,7 @@ void Init_REF(void) {
     PMMCTL0_H = PMMPW_H;
     PMMCTL2 = INTREFEN;
     PMMCTL2 |= REFVSEL_2;
+
     while(!(PMMCTL2 & REFGENRDY));
 }
 

@@ -86,13 +86,15 @@ void main(void) {
     display_changed = TRUE;
     update_display = TRUE;
     Display_Process();
+
     //------------------------------------------------------------------------------
     // Begining of the "While" Operating System
     //------------------------------------------------------------------------------
     while(ALWAYS) {                       // Can the Operating system run
         SerialProcess();
+
         if(!Init_IOT()) continue;
-        
+
         IOTBufferCommands();
         P3OUT ^= TEST_PROBE;               // Change State of TEST_PROBE OFF
     }

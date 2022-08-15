@@ -99,7 +99,7 @@ int Init_IOT(void) {
 
 void waitForReady(void) {
     if(pb0_buffered) {
-        if(strcmp((char*)USB0_Char_Rx_Process, BOOT_RESPONSE)==0) iot_setup_state = CIPMUX_Tx;
+        if(strcmp((char*)USB0_Char_Rx_Process, BOOT_RESPONSE) == 0) iot_setup_state = CIPMUX_Tx;
 
         clearProcessBuff_0();
     }
@@ -159,8 +159,8 @@ void displayNetworkInfo(void) {
 }
 
 void displayIP(int pos) {
-    strcpy(display_line[pos],"          ");
-    strcpy(display_line[pos+1],"          ");
+    strcpy(display_line[pos], "          ");
+    strcpy(display_line[pos + 1], "          ");
     centerStringToDisplay(pos, IP);
     centerStringToDisplay(pos + 1, IP + midIndex + 1);
 }
