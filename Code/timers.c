@@ -10,6 +10,9 @@ extern volatile unsigned char update_display;
 extern char receievedFromPC;
 char pingCounter;
 volatile char pingFlag;
+volatile unsigned int debouncing1, debouncing2;
+volatile unsigned int debounce_count1, debounce_count2;
+volatile unsigned int debounce_thresh1, debounce_thresh2;
 
 void Init_Timers(void) {
     Init_Timer_B0();

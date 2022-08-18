@@ -4,7 +4,6 @@
 #include "macros.h"
 #include "wheels.h"
 #include "functions.h"
-#include "detectors.h"
 #include "sm.h"
 #include <string.h>
 

@@ -5,9 +5,7 @@
 #include "macros.h"
 #include "sm.h"
 #include "timers.h"
-#include "detectors.h"
 #include "serial.h"
-#include "menu.h"
 #include <string.h>
 
 volatile unsigned int sw1Okay, sw2Okay;

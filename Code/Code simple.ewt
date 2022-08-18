@@ -2168,9 +2168,6 @@
         <name>$PROJ_DIR$\clocks.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\detectors.c</name>
-    </file>
-    <file>
         <name>$PROJ_DIR$\init.c</name>
     </file>
     <file>
@@ -2183,9 +2180,6 @@
         <name>$PROJ_DIR$\main.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\menu.c</name>
-    </file>
-    <file>
         <name>$PROJ_DIR$\pid.c</name>
     </file>
     <file>
@@ -2195,9 +2189,6 @@
         <name>$PROJ_DIR$\serial.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\sm.c</name>
-    </file>
-    <file>
         <name>$PROJ_DIR$\switches.c</name>
     </file>
     <file>
@@ -2205,9 +2196,6 @@
     </file>
     <file>
         <name>$PROJ_DIR$\timers.c</name>
-        <configuration>
-            <name>Debug</name>
-        </configuration>
     </file>
     <file>
         <name>$PROJ_DIR$\utils.c</name>

@@ -1,7 +1,6 @@
 #include "pid.h"
 #include "msp430.h"
 #include "macros.h"
-#include "detectors.h"
 #include "utils.h"
 
 int GetOutput(PIDController* pidController, int setPoint, int current) {

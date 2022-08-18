@@ -67,7 +67,6 @@ void main(void) {
     PM5CTL0 &= ~LOCKLPM5;
     // Disable the GPIO power-on default high-impedance mode to activate
     // previously configured port settings
-    // Init_Menu();
     Init_Ports();                        // Initialize Ports
     Init_Clocks();                       // Initialize Clock System
     Init_Conditions();                   // Initialize Variables and Initial Conditions
@@ -92,10 +91,12 @@ void main(void) {
     //------------------------------------------------------------------------------
     while(ALWAYS) {                       // Can the Operating system run
         SerialProcess();
-
+        
         if(!Init_IOT()) continue;
 
         IOTBufferCommands();
+        
+        Display_Process();
         P3OUT ^= TEST_PROBE;               // Change State of TEST_PROBE OFF
     }
 
