@@ -2,7 +2,7 @@
 #                                                                              #
 #      IAR Universal Linker V6.6.2.104                                         #
 #                                                                              #
-#           Link time     =  18/Aug/2022  11:47:04                             #
+#           Link time     =  19/Aug/2022  16:46:53                             #
 #           Target CPU    =  MSP430                                            #
 #           List file     =  "C:\Users\Ibrahim Moghul\OneDrive\Documents\Progr #
 #                            amming\Drone\Code\Debug\List\Code simple.map"     #
@@ -12,7 +12,7 @@
 #                            UBROF version 10.0.6                              #
 #                            Using library modules for C-SPY (-rt)             #
 #           Command line  =  -f                                                #
-#                            C:\Users\IBRAHI~1\AppData\Local\Temp\EWE5CE.tmp   #
+#                            C:\Users\IBRAHI~1\AppData\Local\Temp\EW1882.tmp   #
 #                            ("C:\Users\Ibrahim Moghul\OneDrive\Documents\Prog #
 #                            ramming\Drone\Code\Debug\Obj\adc.r43"             #
 #                            "C:\Users\Ibrahim Moghul\OneDrive\Documents\Progr #
@@ -223,8 +223,8 @@ clocks ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug
         _A_PM5CTL0_L                        0130
         _A_SFRIFG1_L                        0102
         _A_WDTCTL_L                         01CC
-        Init_Clocks                         88DA
-        Software_Trim                       8446
+        Init_Clocks                         88FE
+        Software_Trim                       846A
         ?setjmp_save_r4                     NOT NEEDED
         ?setjmp_save_r5                     NOT NEEDED
         CSCTL0                              0180
@@ -261,7 +261,7 @@ init ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\O
         _A_PAOUT_L                          0202
         _A_PCOUT_L                          0242
         Init_LEDs                           NOT NEEDED
-        Init_Conditions                     899C
+        Init_Conditions                     89C0
         ?setjmp_save_r4                     NOT NEEDED
         ?setjmp_save_r5                     NOT NEEDED
         PAOUT                               0202
@@ -277,20 +277,20 @@ iot ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\Ob
         IP                                  2037
         dotFound                            2045
         midIndex                            2002
-        Init_IOT                            82D4
-        waitForReady                        8CE2
-        SendIOTCommand                      8DB6
-        getSSID                             8A72
-        getIP                               8870
-        displayNetworkInfo                  8DE6
-        displayIP                           8AB8
-        IOTBufferCommands                   8D62
+        Init_IOT                            82F8
+        waitForReady                        8D50
+        SendIOTCommand                      8E04
+        getSSID                             8A0A
+        getIP                               8894
+        displayNetworkInfo                  8E34
+        displayIP                           8ADC
+        IOTBufferCommands                   8D92
         ?setjmp_save_r4                     NOT NEEDED
         ?setjmp_save_r5                     NOT NEEDED
         UCA0IE                              051A
         UCA0IE_H                            051B
         UCA0IE_L                            051A
-        ?Subroutine0                        8EFC
+        ?Subroutine0                        8F4A
 LCD ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Compiled\LCD.r43 )
         _A_PAOUT_L                          NOT NEEDED
         _A_PBOUT_L                          0222
@@ -317,32 +317,32 @@ LCD ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Compiled
         char_count                          NOT NEEDED
         current_line                        NOT NEEDED
         LCD_test                            NOT NEEDED
-        spi_chipselect_idle                 8E86
-        spi_chipselect_active               8EE6
-        spi_reset_idle                      8F0C
-        spi_reset_active                    8F12
-        Display_Update                      8A2C
+        spi_chipselect_idle                 8ED4
+        spi_chipselect_active               8F34
+        spi_reset_idle                      8F5A
+        spi_reset_active                    8F60
+        Display_Update                      8A96
         enable_display_update               NOT NEEDED
         update_string                       NOT NEEDED
-        Init_LCD                            84E8
+        Init_LCD                            850C
         lcd_4line                           NOT NEEDED
         lcd_BIG_mid                         NOT NEEDED
         lcd_BIG_bot                         NOT NEEDED
         lcd_180                             NOT NEEDED
-        lcd_out                             8C9C
+        lcd_out                             8D0A
         lcd_puts                            NOT NEEDED
-        WriteIns                            8C4C
-        WriteData                           8C74
+        WriteIns                            8CE2
+        WriteData                           8CBA
         CheckBusy                           NOT NEEDED
-        ClrDisplay                          8DD0
-        ClrDisplay_Buffer_0                 8E38
-        ClrDisplay_Buffer_1                 8DFC
-        ClrDisplay_Buffer_2                 8E4C
-        ClrDisplay_Buffer_3                 8E60
+        ClrDisplay                          8E1E
+        ClrDisplay_Buffer_0                 8E86
+        ClrDisplay_Buffer_1                 8E4A
+        ClrDisplay_Buffer_2                 8E9A
+        ClrDisplay_Buffer_3                 8EAE
         SetPostion                          NOT NEEDED
-        DisplayOnOff                        8E10
-        Init_SPI_B1                         8B3A
-        SPI_B1_write                        8D80
+        DisplayOnOff                        8E5E
+        Init_SPI_B1                         8B5E
+        SPI_B1_write                        8DCE
         ?setjmp_save_r4                     NOT NEEDED
         ?setjmp_save_r5                     NOT NEEDED
         PAOUT                               0202
@@ -373,7 +373,7 @@ LCD ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Compiled
         UCB1IFG_H                           05ED
         UCB1IFG_L                           05EC
 led ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\Obj\led.r43 )
-        Display_Process                     8CC0
+        Display_Process                     8D2E
         ?setjmp_save_r4                     NOT NEEDED
         ?setjmp_save_r5                     NOT NEEDED
 main ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\Obj\main.r43 )
@@ -381,7 +381,7 @@ main ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\O
         _A_PM5CTL0_L                        NOT NEEDED
         slow_input_down                     NOT NEEDED
         display_mode                        NOT NEEDED
-        main                                8792
+        main                                87B6
         ?setjmp_save_r4                     NOT NEEDED
         ?setjmp_save_r5                     NOT NEEDED
         PBOUT                               0222
@@ -418,13 +418,13 @@ ports ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\
         _A_PCSEL0_L                         024A
         _A_PCSEL1_L                         024C
         _A_PCSELC_L                         0256
-        Init_Ports                          8D9C
-        Init_Port1                          8940
-        Init_Port2                          8584
-        Init_Port3                          839C
-        Init_Port4                          861E
-        Init_Port5                          8BB4
-        Init_Port6                          86A0
+        Init_Ports                          8DEA
+        Init_Port1                          8964
+        Init_Port2                          85A8
+        Init_Port3                          83C0
+        Init_Port4                          8642
+        Init_Port5                          8C50
+        Init_Port6                          86C4
         ?setjmp_save_r4                     NOT NEEDED
         ?setjmp_save_r5                     NOT NEEDED
         PAOUT                               0202
@@ -526,18 +526,18 @@ serial ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug
         pb1_buffered                        201E
         serialState                         NOT NEEDED
         receievedFromPC                     2225
-        Init_Serial_UCA                     871C
+        Init_Serial_UCA                     8740
         eUSCI_A0_ISR                        80C6
         eUSCI_A1_ISR                        8136
-        clearProcessBuff                    8D24
-        clearProcessBuff_0                  8EBA
+        clearProcessBuff                    8D72
+        clearProcessBuff_0                  8F08
         clearProcessBuff_1                  NOT NEEDED
-        USCI_A0_transmit                    8EF2
+        USCI_A0_transmit                    8F40
         USCI_A1_transmit                    NOT NEEDED
-        loadRingtoPB                        8802
-        loadRingtoPB_0                      8AFC
-        loadRingtoPB_1                      8B1E
-        SerialProcess                       8F04
+        loadRingtoPB                        8826
+        loadRingtoPB_0                      8B20
+        loadRingtoPB_1                      8B42
+        SerialProcess                       8F52
         eUSCI_A1_ISR::??INTVEC 64           FFE2
         eUSCI_A0_ISR::??INTVEC 66           FFE4
         ?setjmp_save_r4                     NOT NEEDED
@@ -584,7 +584,7 @@ serial ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug
         UCA1IV                              059E
         UCA1IV_H                            059F
         UCA1IV_L                            059E
-        ?Subroutine0                        8B14
+        ?Subroutine0                        8B38
 switches ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\Obj\switches.r43 )
         _A_PAIE_L                           NOT NEEDED
         _A_PAIFG_L                          NOT NEEDED
@@ -595,6 +595,10 @@ switches ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Deb
         _A_TB0R_L                           0390
         _A_TB0CCR1_L                        0394
         _A_TB0CCR2_L                        NOT NEEDED
+        _A_TB3CCR1_L                        0454
+        _A_TB3CCR2_L                        0456
+        _A_TB3CCR3_L                        0458
+        _A_TB3CCR4_L                        045A
         sw1Okay                             NOT NEEDED
         sw2Okay                             NOT NEEDED
         count_debounce_SW1                  NOT NEEDED
@@ -605,7 +609,7 @@ switches ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Deb
         transMenu                           NOT NEEDED
         interractMenu                       NOT NEEDED
         switchP4_interrupt                  81B6
-        switchP2_interrupt                  81EA
+        switchP2_interrupt                  81FE
         switchP4_interrupt::??INTVEC 44     FFCE
         switchP2_interrupt::??INTVEC 48     FFD2
         ?setjmp_save_r4                     NOT NEEDED
@@ -637,8 +641,20 @@ switches ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Deb
         TB0CCR2                             0396
         TB0CCR2_H                           0397
         TB0CCR2_L                           0396
+        TB3CCR1                             0454
+        TB3CCR1_H                           0455
+        TB3CCR1_L                           0454
+        TB3CCR2                             0456
+        TB3CCR2_H                           0457
+        TB3CCR2_L                           0456
+        TB3CCR3                             0458
+        TB3CCR3_H                           0459
+        TB3CCR3_L                           0458
+        TB3CCR4                             045A
+        TB3CCR4_H                           045B
+        TB3CCR4_L                           045A
 system ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\Obj\system.r43 )
-        enable_interrupts                   8F18
+        enable_interrupts                   8F66
         ?setjmp_save_r4                     NOT NEEDED
         ?setjmp_save_r5                     NOT NEEDED
 timers ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\Obj\timers.r43 )
@@ -665,10 +681,10 @@ timers ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug
         _A_TB3CCTL3_L                       0448
         _A_TB3CCTL4_L                       044A
         _A_TB3CCR0_L                        0452
-        _A_TB3CCR1_L                        0454
-        _A_TB3CCR2_L                        0456
-        _A_TB3CCR3_L                        0458
-        _A_TB3CCR4_L                        045A
+        _A_TB3CCR1_L                        NOT NEEDED
+        _A_TB3CCR2_L                        NOT NEEDED
+        _A_TB3CCR3_L                        NOT NEEDED
+        _A_TB3CCR4_L                        NOT NEEDED
         pingCounter                         2226
         pingFlag                            2227
         debouncing1                         2020
@@ -677,14 +693,14 @@ timers ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug
         debounce_count2                     2026
         debounce_thresh1                    2028
         debounce_thresh2                    202A
-        Init_Timers                         8EDA
-        Init_Timer_B0                       8C20
-        Init_Timer_B1                       8D04
-        Init_Timer_B3                       8BEE
-        Timer0_B0_ISR                       821E
-        TIMER0_B1_ISR                       8226
-        Timer1_B0_ISR                       829C
-        TIMER1_B1_ISR                       82CA
+        Init_Timers                         8F28
+        Init_Timer_B0                       8C14
+        Init_Timer_B1                       8C8A
+        Init_Timer_B3                       8BD8
+        Timer0_B0_ISR                       8242
+        TIMER0_B1_ISR                       824A
+        Timer1_B0_ISR                       82C0
+        TIMER1_B1_ISR                       82EE
         TIMER1_B1_ISR::??INTVEC 80          FFF2
         Timer1_B0_ISR::??INTVEC 82          FFF4
         TIMER0_B1_ISR::??INTVEC 84          FFF6
@@ -773,8 +789,8 @@ timers ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug
         TB3CCR4_H                           045B
         TB3CCR4_L                           045A
 utils ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\Obj\utils.r43 )
-        centerStringToDisplay               8B78
-        subStringPos                        89E6
+        centerStringToDisplay               8B9C
+        subStringPos                        8A50
         stoi                                NOT NEEDED
         charInString                        NOT NEEDED
         absVal                              NOT NEEDED
@@ -789,15 +805,15 @@ wheels ( C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\Debug
 ?abort ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
         abort                               NOT NEEDED
 ?__dbg_break ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
-        __DebugBreak                        8F2A
+        __DebugBreak                        8F78
 ?__dwrite ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
         __dwrite                            NOT NEEDED
 ?__exit ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
-        __exit                              8E24
+        __exit                              8E72
 ?__write ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
         __write                             NOT NEEDED
 ?_exit ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
-        _exit                               8F22
+        _exit                               8F70
         __cstart_call_dtors                 NOT NEEDED
         __cstart_closeall                   NOT NEEDED
         __cstart_clearlocks                 NOT NEEDED
@@ -827,7 +843,7 @@ lowinit ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib
 ?reset_vector ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
         ?reset_vector                       FFFE
 ?exit ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
-        exit                                8F1E
+        exit                                8F6C
 ?FrwpInit ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
         __iar_430_frwp_init                 NOT NEEDED
 ?malloc ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
@@ -839,12 +855,12 @@ lowinit ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib
         ?DivMod8s                           NOT NEEDED
         ?DivMod16s                          NOT NEEDED
 ?memcpy ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
-        memcpy                              8E74
+        memcpy                              8EC2
 ?memmove ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
         memmove                             NOT NEEDED
 ?memzero ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
-        __data16_memzero                    8ECA
-        __data16_memcpy                     8F26
+        __data16_memzero                    8F18
+        __data16_memcpy                     8F74
         __data16_memmove                    NOT NEEDED
 ?MpuInit ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
         __iar_430_mpu_init                  NOT NEEDED
@@ -867,11 +883,11 @@ lowinit ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib
 ?IndCallR15 ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
         ?IndCallR15                         NOT NEEDED
 ?strcmp ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
-        strcmp                              8D44
+        strcmp                              8DB0
 ?strcpy ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
-        strcpy                              8EAA
+        strcpy                              8EF8
 ?strlen ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
-        strlen                              8E98
+        strlen                              8EE6
 ?xcloseall ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
         _Close_all                          NOT NEEDED
 ?xgetmemchunk ( C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\430\lib\dlib\dl430xlsfn.r43 )
@@ -919,17 +935,17 @@ ports                 754            30
   + shared                            8
 serial                596    453     26
   + common             68
-switches              104             2
-  + shared             50             4
+switches              140             2
+  + shared             50            12
   + common
 system                  6
-timers                320     14     40
+timers                362     14     32
   + common             88
 utils                 130
 N/A (command line)           160
 N/A (alignment)
 ----------          -----    ---    ---    ---
-Total:              3 728    711    174    156
+Total:              3 806    711    174    156
   + common             88
 
 
@@ -991,17 +1007,17 @@ DATA16_I                               2000 - 2000               1   rel    1
 DATA16_Z                               2002 - 2227             226   rel    1
 CODE_I                                    2228                       rel    1
 DATA20_I                                  2228                       rel    1
-DATA20_Z                                  2228                       rel    1
 DATA20_N                                  2228                       rel    1
+DATA20_Z                                  2228                       rel    1
 CSTACK                                 2F60 - 2FFF              A0   rel    1
 DATA16_C                               8000 - 809A              9B   rel    0
 DATA16_ID                              809C - 809C               1   rel    1
 DATA20_ID                                 809E                       rel    1
 DATA20_C                                  809E                       rel    1
 CSTART                                 809E - 80C5              28   rel    1
-ISR_CODE                               80C6 - 82D3             20E   rel    1
-CODE_ID                                   82D4                       rel    1
-<CODE> 1                               82D4 - 8F2B             C58   rel    1
+ISR_CODE                               80C6 - 82F7             232   rel    1
+CODE_ID                                   82F8                       rel    1
+<CODE> 1                               82F8 - 8F79             C82   rel    1
 INTVEC                                 FFA2 - FFF9              58   com    1
 RESET                                  FFFE - FFFF               2   rel    1
 
@@ -1011,7 +1027,7 @@ RESET                                  FFFE - FFFF               2   rel    1
                 *                                      *
                 ****************************************
 
- 3 816 bytes of CODE  memory
+ 3 894 bytes of CODE  memory
    711 bytes of DATA  memory (+ 174 absolute )
    156 bytes of CONST memory
 

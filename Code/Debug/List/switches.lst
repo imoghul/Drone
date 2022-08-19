@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V7.21.1.1000/W32 for MSP430          18/Aug/2022  11:38:58
+# IAR C/C++ Compiler V7.21.1.1000/W32 for MSP430          19/Aug/2022  16:46:52
 # Copyright 1996-2021 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for MSP430, 8K KickStart Edition 7.21
 #
@@ -16,7 +16,7 @@
 #        C:\Users\Ibrahim
 #        Moghul\OneDrive\Documents\Programming\Drone\Code\switches.c
 #    Command line  =  
-#        -f C:\Users\IBRAHI~1\AppData\Local\Temp\EW7A7F.tmp ("C:\Users\Ibrahim
+#        -f C:\Users\IBRAHI~1\AppData\Local\Temp\EW164E.tmp ("C:\Users\Ibrahim
 #        Moghul\OneDrive\Documents\Programming\Drone\Code\switches.c" -lC
 #        "C:\Users\Ibrahim
 #        Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\List" -o
@@ -82,6 +82,26 @@ C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\switches.c
    \                                 In  segment DATA16_AN, at 0x396
    \   union <unnamed> _A_TB0CCR2_L
    \                     _A_TB0CCR2_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x454
+   \   union <unnamed> _A_TB3CCR1_L
+   \                     _A_TB3CCR1_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x456
+   \   union <unnamed> _A_TB3CCR2_L
+   \                     _A_TB3CCR2_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x458
+   \   union <unnamed> _A_TB3CCR3_L
+   \                     _A_TB3CCR3_L:
+   \   000000                DS8 2
+
+   \                                 In  segment DATA16_AN, at 0x45a
+   \   union <unnamed> _A_TB3CCR4_L
+   \                     _A_TB3CCR4_L:
    \   000000                DS8 2
       2          #include "switches.h"
       3          #include "ports.h"
@@ -178,9 +198,9 @@ C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\switches.c
    \   000000   0F12         PUSH.W  R15
      46              if(P4IFG & SW1 && debouncing1 == FALSE) {
    \   000002   E2B33D02     BIT.B   #0x2, &0x23d
-   \   000006   1424         JEQ     ??switchP4_interrupt_0
+   \   000006   1E24         JEQ     ??switchP4_interrupt_0
    \   000008   8293....     CMP.W   #0x0, &debouncing1
-   \   00000C   1120         JNE     ??switchP4_interrupt_0
+   \   00000C   1B20         JNE     ??switchP4_interrupt_0
      47                  P4IE &= ~SW1;
    \   00000E   E2C33B02     BIC.B   #0x2, &0x23b
      48                  P4IFG &= ~SW1;
@@ -195,67 +215,88 @@ C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\switches.c
    \   000026   B2D010008403 BIS.W   #0x10, &0x384
      52                  debouncing1 = TRUE;
    \   00002C   9243....     MOV.W   #0x1, &debouncing1
-     53              }
-     54          }
+     53                  
+     54                  
+     55                  RIGHT_FORWARD_SPEED = LEFT_FORWARD_SPEED = RIGHT_REAR_SPEED = LEFT_REAR_SPEED = 5000;
+   \   000030   3F408813     MOV.W   #0x1388, R15
+   \   000034   824F5A04     MOV.W   R15, &0x45a
+   \   000038   824F5804     MOV.W   R15, &0x458
+   \   00003C   824F5604     MOV.W   R15, &0x456
+   \   000040   824F5404     MOV.W   R15, &0x454
+     56              }
+     57          }
    \                     ??switchP4_interrupt_0:
-   \   000030   3F41         POP.W   R15
-   \   000032   0013         RETI
-   \   000034                REQUIRE _A_PBIFG_L
-   \   000034                REQUIRE _A_PBIE_L
-   \   000034                REQUIRE _A_TB0CCTL1_L
-   \   000034                REQUIRE _A_TB0CCR1_L
-   \   000034                REQUIRE _A_TB0R_L
-     55          
-     56          //===========================================================================
-     57          // Function name: switchP4_interrupt
-     58          //
-     59          // Description: This is the switch 2 interrupt, turns off LCD_BACKLITE and its
-     60          // blinking timer
+   \   000044   3F41         POP.W   R15
+   \   000046   0013         RETI
+   \   000048                REQUIRE _A_PBIFG_L
+   \   000048                REQUIRE _A_PBIE_L
+   \   000048                REQUIRE _A_TB0CCTL1_L
+   \   000048                REQUIRE _A_TB0CCR1_L
+   \   000048                REQUIRE _A_TB0R_L
+   \   000048                REQUIRE _A_TB3CCR1_L
+   \   000048                REQUIRE _A_TB3CCR2_L
+   \   000048                REQUIRE _A_TB3CCR3_L
+   \   000048                REQUIRE _A_TB3CCR4_L
+     58          
+     59          //===========================================================================
+     60          // Function name: switchP4_interrupt
      61          //
-     62          // Passed : no variables passed
-     63          // Locals: no variables declared
-     64          // Returned: no values returned
-     65          // Globals: no global values
-     66          //
-     67          // Author: Ibrahim Moghul
-     68          // Date: Feb 2022
-     69          // Compiler: Built with IAR Embedded Workbench Version: (7.21.1)
-     70          //===========================================================================
-     71          #pragma vector=PORT2_VECTOR
+     62          // Description: This is the switch 2 interrupt, turns off LCD_BACKLITE and its
+     63          // blinking timer
+     64          //
+     65          // Passed : no variables passed
+     66          // Locals: no variables declared
+     67          // Returned: no values returned
+     68          // Globals: no global values
+     69          //
+     70          // Author: Ibrahim Moghul
+     71          // Date: Feb 2022
+     72          // Compiler: Built with IAR Embedded Workbench Version: (7.21.1)
+     73          //===========================================================================
+     74          #pragma vector=PORT2_VECTOR
 
    \                                 In  segment ISR_CODE, align 2
-     72          __interrupt void switchP2_interrupt(void) {
+     75          __interrupt void switchP2_interrupt(void) {
    \                     switchP2_interrupt:
    \   000000   0F12         PUSH.W  R15
-     73              if(P2IFG & SW2 && debouncing2 == FALSE) {
+     76              if(P2IFG & SW2 && debouncing2 == FALSE) {
    \   000002   F2B21D02     BIT.B   #0x8, &0x21d
-   \   000006   1424         JEQ     ??switchP2_interrupt_0
+   \   000006   1C24         JEQ     ??switchP2_interrupt_0
    \   000008   8293....     CMP.W   #0x0, &debouncing2
-   \   00000C   1120         JNE     ??switchP2_interrupt_0
-     74                  P2IE &= ~SW2;
+   \   00000C   1920         JNE     ??switchP2_interrupt_0
+     77                  P2IE &= ~SW2;
    \   00000E   F2C21B02     BIC.B   #0x8, &0x21b
-     75                  P2IFG &= ~SW2;
+     78                  P2IFG &= ~SW2;
    \   000012   F2C21D02     BIC.B   #0x8, &0x21d
-     76                  TB0CCTL2 &= ~CCIFG;
+     79                  TB0CCTL2 &= ~CCIFG;
    \   000016   92C38603     BIC.W   #0x1, &0x386
-     77                  TB0CCR2 = TB0R + TB0CCR2_INTERVAL;
+     80                  TB0CCR2 = TB0R + TB0CCR2_INTERVAL;
    \   00001A   1F429003     MOV.W   &0x390, R15
    \   00001E   3F5050C3     ADD.W   #0xc350, R15
    \   000022   824F9603     MOV.W   R15, &0x396
-     78                  TB0CCTL2 |= CCIE;
+     81                  TB0CCTL2 |= CCIE;
    \   000026   B2D010008603 BIS.W   #0x10, &0x386
-     79                  debouncing2 = TRUE;
+     82                  debouncing2 = TRUE;
    \   00002C   9243....     MOV.W   #0x1, &debouncing2
-     80              }
-     81          }
+     83                  RIGHT_FORWARD_SPEED = LEFT_FORWARD_SPEED = RIGHT_REAR_SPEED = LEFT_REAR_SPEED = WHEEL_OFF;
+   \   000030   82435A04     MOV.W   #0x0, &0x45a
+   \   000034   82435804     MOV.W   #0x0, &0x458
+   \   000038   82435604     MOV.W   #0x0, &0x456
+   \   00003C   82435404     MOV.W   #0x0, &0x454
+     84              }
+     85          }
    \                     ??switchP2_interrupt_0:
-   \   000030   3F41         POP.W   R15
-   \   000032   0013         RETI
-   \   000034                REQUIRE _A_PAIFG_L
-   \   000034                REQUIRE _A_PAIE_L
-   \   000034                REQUIRE _A_TB0CCTL2_L
-   \   000034                REQUIRE _A_TB0CCR2_L
-   \   000034                REQUIRE _A_TB0R_L
+   \   000040   3F41         POP.W   R15
+   \   000042   0013         RETI
+   \   000044                REQUIRE _A_PAIFG_L
+   \   000044                REQUIRE _A_PAIE_L
+   \   000044                REQUIRE _A_TB0CCTL2_L
+   \   000044                REQUIRE _A_TB0CCR2_L
+   \   000044                REQUIRE _A_TB0R_L
+   \   000044                REQUIRE _A_TB3CCR1_L
+   \   000044                REQUIRE _A_TB3CCR2_L
+   \   000044                REQUIRE _A_TB3CCR3_L
+   \   000044                REQUIRE _A_TB3CCR4_L
 
    \                                 In  segment INTVEC, offset 0x2c, root
    \                     `??switchP4_interrupt::??INTVEC 44`:
@@ -264,7 +305,7 @@ C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\switches.c
    \                                 In  segment INTVEC, offset 0x30, root
    \                     `??switchP2_interrupt::??INTVEC 48`:
    \   000030   ....         DC16    switchP2_interrupt
-     82          
+     86          
 
    Maximum stack usage in bytes:
 
@@ -287,6 +328,10 @@ C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\switches.c
        2  _A_TB0CCTL1_L
        2  _A_TB0CCTL2_L
        2  _A_TB0R_L
+       2  _A_TB3CCR1_L
+       2  _A_TB3CCR2_L
+       2  _A_TB3CCR3_L
+       2  _A_TB3CCR4_L
        2  calibrationMode
        2  count_debounce_SW1
        2  count_debounce_SW2
@@ -295,21 +340,21 @@ C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\switches.c
        2  sw1_pos
        2  sw2Okay
        2  sw2_pos
-      52  switchP2_interrupt
+      68  switchP2_interrupt
        2  switchP2_interrupt::??INTVEC 48
-      52  switchP4_interrupt
+      72  switchP4_interrupt
        2  switchP4_interrupt::??INTVEC 44
        1  transMenu
 
  
-  18 bytes in segment DATA16_AN
+  26 bytes in segment DATA16_AN
   16 bytes in segment DATA16_Z
    4 bytes in segment INTVEC
- 104 bytes in segment ISR_CODE
+ 140 bytes in segment ISR_CODE
  
- 104 bytes of CODE  memory
+ 140 bytes of CODE  memory
    0 bytes of CONST memory (+  4 bytes shared)
-  16 bytes of DATA  memory (+ 18 bytes shared)
+  16 bytes of DATA  memory (+ 26 bytes shared)
 
 Errors: none
 Warnings: none

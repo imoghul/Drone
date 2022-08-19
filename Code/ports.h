@@ -56,8 +56,8 @@
 // Port 6 Pins
 #define R_FORWARD       (0x01) // 0
 #define L_FORWARD       (0x02) // 1 
-#define R_REVERSE       (0x04) // 2 
-#define L_REVERSE_2355  (0x08) // 3 
+#define R_REAR       (0x04) // 2 
+#define L_REAR  (0x08) // 3 
 #define IR_LED          (0x10) // 4 
 #define P6_5            (0x20) // 5 
 #define GRN_LED         (0x40) // 6 

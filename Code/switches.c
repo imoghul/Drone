@@ -50,6 +50,9 @@ __interrupt void switchP4_interrupt(void) {
         TB0CCR1 = TB0R + TB0CCR1_INTERVAL;
         TB0CCTL1 |= CCIE;
         debouncing1 = TRUE;
+        
+        
+        RIGHT_FORWARD_SPEED = LEFT_FORWARD_SPEED = RIGHT_REAR_SPEED = LEFT_REAR_SPEED = 5000;
     }
 }
 
@@ -77,6 +80,7 @@ __interrupt void switchP2_interrupt(void) {
         TB0CCR2 = TB0R + TB0CCR2_INTERVAL;
         TB0CCTL2 |= CCIE;
         debouncing2 = TRUE;
+        RIGHT_FORWARD_SPEED = LEFT_FORWARD_SPEED = RIGHT_REAR_SPEED = LEFT_REAR_SPEED = WHEEL_OFF;
     }
 }
 

@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V7.21.1.1000/W32 for MSP430          18/Aug/2022  11:47:04
+# IAR C/C++ Compiler V7.21.1.1000/W32 for MSP430          19/Aug/2022  16:46:52
 # Copyright 1996-2021 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for MSP430, 8K KickStart Edition 7.21
 #
@@ -16,7 +16,7 @@
 #        C:\Users\Ibrahim
 #        Moghul\OneDrive\Documents\Programming\Drone\Code\main.c
 #    Command line  =  
-#        -f C:\Users\IBRAHI~1\AppData\Local\Temp\EWE3D9.tmp ("C:\Users\Ibrahim
+#        -f C:\Users\IBRAHI~1\AppData\Local\Temp\EW164D.tmp ("C:\Users\Ibrahim
 #        Moghul\OneDrive\Documents\Programming\Drone\Code\main.c" -lC
 #        "C:\Users\Ibrahim
 #        Moghul\OneDrive\Documents\Programming\Drone\Code\Debug\List" -o
@@ -187,24 +187,26 @@ C:\Users\Ibrahim Moghul\OneDrive\Documents\Programming\Drone\Code\main.c
      97                  IOTBufferCommands();
    \   000060   ........     CALLA   #IOTBufferCommands
      98                  
-     99                  Display_Process();
+     99                  
+    100                  
+    101                  Display_Process();
    \   000064   ........     CALLA   #Display_Process
-    100                  P3OUT ^= TEST_PROBE;               // Change State of TEST_PROBE OFF
+    102                  P3OUT ^= TEST_PROBE;               // Change State of TEST_PROBE OFF
    \   000068   D2E32202     XOR.B   #0x1, &0x222
    \   00006C   F33F         JMP     ??main_0
    \   00006E   0343         NOP
    \   000070                REQUIRE _A_PM5CTL0_L
    \   000070                REQUIRE _A_PBOUT_L
-    101              }
-    102          
-    103              //------------------------------------------------------------------------------
-    104          }
+    103              }
+    104          
+    105              //------------------------------------------------------------------------------
+    106          }
 
    \                                 In  segment DATA16_C, align 1, align-sorted
    \                     `?<Constant "          ">`:
    \   000000   202020202020 DC8 "          "
    \            2020202000  
-    105          
+    107          
 
    Maximum stack usage in bytes:
 

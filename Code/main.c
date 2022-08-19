@@ -96,6 +96,8 @@ void main(void) {
 
         IOTBufferCommands();
         
+        
+        
         Display_Process();
         P3OUT ^= TEST_PROBE;               // Change State of TEST_PROBE OFF
     }
